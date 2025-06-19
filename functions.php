@@ -10,4 +10,5 @@ function dd($value){
 function urlIs($page){
     return $_SERVER['REQUEST_URI'] === $page;
 }
+
 ?>
