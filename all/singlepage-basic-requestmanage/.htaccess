@@ -1,0 +1,5 @@
+#.htaccess code
+#https://serverfault.com/questions/56082/configure-apache-to-handle-all-requests-via-single-index-php
+
+RewriteEngine On
+RewriteRule ^(.*)$ index.php [L]

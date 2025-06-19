@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width:600px){
+.panel{
+	width:80%;	
+}
+.alert{
+	margin-bottom:10px;
+	padding:0;
+}
+.alert div{
+	width:100%;
+}
+h1{
+	margin-top:10px;
+}
+hr{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.panel input,.panel textarea{
+	width:100%;
+	margin-top:10px;
+	text-align:center;
+}
+textarea{
+	resize:none;
+}
+form{
+	width:100%;
+}
+h1{
+	color:#CCC;
+}
+ul{
+	list-style:none;
+	margin-left: -40px;
+}
+.l,.r,.m{
+	width:100%;
+	margin-bottom:10px;
+}
+}

@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width:600px){
+html{
+
+}
+.content{
+	
+}
+.h{
+	font-weight:600;
+}
+.row{
+	width:100%;
+}
+.row .row{
+
+}
+.row .row b{
+	color:#000;
+}
+.content .row .row div{
+
+}
+.jumbo{
+	width:80%;
+	text-align:center;
+	padding:10px;
+}
+.jumbo .row .row .col-md-6{
+
+}
+.jumbo .row .row .col-md-4{
+
+}
+.jumbo .row .row .col-md-2{
+	
+}
+[class^="col-md-"]{
+	padding:0;
+}
+#ls{
+	margin-top:20px;
+}
+}

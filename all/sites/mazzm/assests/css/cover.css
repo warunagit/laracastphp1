@@ -1,0 +1,271 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default {
+  color: #000;
+  border: 1px solid #000;
+  text-shadow: none;
+}
+.btn-default:hover,
+.btn-default:focus {
+  color:#000;
+  border: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  color: #000;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.1);
+  /*box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+}
+body {
+	padding-top: 0px;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  /*padding: 30px;*/
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+   /* position: fixed;*/
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+   /* width: 700px;*/
+  }
+}
+h2{
+	font-size:20px;
+}
+hr{
+	width:50%;
+	border-top: .1em solid #333;
+}
+@media (max-width: 600px) {
+body{
+	padding-top:0px;
+}
+}
+@font-face {
+	font-family: 'font';
+	src:url('../fonts/font.ttf');
+}
+body{
+	font-family: 'font';
+}
+
+
+
+
+
+
+/*cover image*/
+@media screen and (min-width:600px){
+html{
+	background-image:url(../image/mazzm.com.full.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+	background-size: cover;
+	z-index:-10;
+	/*padding-top:20px;*/
+}
+.land .col-md-5 img{
+	display:none;
+}
+}
+@media screen and (max-width:600px){
+html{
+	background-image:none;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+	background-size: cover;
+	padding-top:0px;
+}
+.land .col-md-5 img{
+	width:100%;
+}
+.land .col-md-5 img{
+	content:url(../image/mazzm.com.small.png);
+}
+.land .col-md-5{
+  padding:0px;
+}
+}
+
+/* retina query */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (                min-resolution: 192dpi) and (min-width: 700px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 700px) { 
+
+  /* Medium screen, retina, stuff to override above media query */
+html{
+	background-image:none;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+	background-size: cover;
+	padding-top:0px;
+}
+.land .col-md-5 img{
+	width:100%;
+}
+.land .col-md-5 img{
+	content:url(../image/mazzm.com.small.png);
+}
+.land .col-md-5{
+  padding:0px;
+}
+
+}

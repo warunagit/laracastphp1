@@ -32,18 +32,17 @@
         <ul class="items-center justify-end flex-1 list-reset lg:flex">
             <li class="mr-3">
                 <a class="inline-block px-4 py-2 text-black no-underline
-                 <?= urlIs('/sites/laracast/php/')?'font-bold':''?>" href="/sites/laracast/php/">Index</a>
+                 <?= urlIs('/')?'font-bold':''?>" href="/">Index</a>
             </li>
             <li class="mr-3">
                 <a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline
-                 <?= urlIs('/sites/laracast/php/about.php')?'font-bold':''?>"
-                
-                    href="about.php">About</a>
+                 <?= urlIs('/about')?'font-bold':''?>"
+                    href="/about">About</a>
             </li>
             <li class="mr-3">
                 <a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline
-                <?= urlIs('/sites/laracast/php/contact.php')?'font-bold':''?>"
-                    href="contact.php">Contact</a>
+                <?= urlIs('/contact')?'font-bold':''?>"
+                    href="/contact">Contact</a>
             </li>
         </ul>
         <button id="navAction"
