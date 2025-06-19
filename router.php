@@ -1,4 +1,5 @@
 <?php
+//1
 //array contains available pages to map
 //mapping requests by base url, using array
 $routes = [
@@ -8,6 +9,7 @@ $routes = [
     "/404" => "controllers/404.php",
 ];
 
+//2
 //get base url, without params
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
@@ -22,6 +24,7 @@ function routeToController($uri,$routes){
     }
 }
 
+//3
 //response to server codes
 function abort($code = 404){
     http_response_code($code);
