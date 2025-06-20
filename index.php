@@ -1,16 +1,21 @@
 <?php
 require 'functions.php';
 //require 'router.php';
+require 'Database.php';
 
-//connect to mysql
-$dsn = "mysql:host=;port=3306;user=root;password=1234;dbname=laracastphp;";
-$pdo = new PDO($dsn);
 
-$statement = $pdo->prepare("SELECT * FROM posts");
-$statement->execute();
-
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 //dd($posts);
-foreach($posts as $post){
+$config = require 'config.php';
+
+$db = new Database($config['database']);
+
+$id = $_GET['id'];
+$query = "SELECT * FROM posts WHERE id = ?";
+
+$posts = $db->query($query,['id'])->fetch();
+
+/*foreach($posts as $post){
     echo "<li>{$post['title']}</li>";
-}
+}*/
+
+dd($posts['title']);
