@@ -18,6 +18,8 @@ create database class and config file to store connection data
 
 6
 mysql security
+access url parameters using $_GET
 use prepared statments with post adders. ?
+never directly use parameters in MYSQL queries due vulnerabilities
 
 7
