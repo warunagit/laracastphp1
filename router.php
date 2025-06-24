@@ -1,15 +1,7 @@
 <?php
 //1
-//array contains available pages to map
-//mapping requests by base url, using array
-$routes = [
-    "/" => "controllers/index.php",
-    "/about" => "controllers/about.php",
-    "/contact" => "controllers/contact.php",
-    "/notes" => "controllers/notes.php",
-    "/note" => "controllers/note.php",
-    "/404" => "controllers/404.php",
-];
+//get available routes
+$routes = require 'routes.php';
 
 //2
 //get base url, without params

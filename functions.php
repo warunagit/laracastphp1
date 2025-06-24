@@ -11,4 +11,9 @@ function urlIs($page){
     return $_SERVER['REQUEST_URI'] === $page;
 }
 
+function authorize($condition, $status = Response::FORBIDDEN){
+    if(!$condition){
+        abort($status);
+    }
+}
 ?>
