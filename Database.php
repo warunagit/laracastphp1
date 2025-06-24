@@ -2,6 +2,7 @@
 class Database{
 
     public $connection;
+    private $statement;
 
     public function __construct($config, $username = 'root', $passord='1234'){
 
@@ -15,8 +16,12 @@ class Database{
     }
 
     public function query($query, $params = []){
-        $statement = $this->connection->prepare($query);
-        $statement->execute($params);
-        return $statement;
+        $this->statement = $this->connection->prepare($query);
+        $this->statement->execute($params);
+        return $this;
+    }
+
+    public function fetch(){
+        return $this->statement->fetch();
     }
 }
