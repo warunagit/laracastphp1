@@ -12,7 +12,10 @@ require "partials/banner.php"; ?>
                     <div>
                         <textarea id="body" name="body" class="border border-blue-gray-200 text-black"></textarea>
 
-                        <?php if (isset($errors['body'])): ?>
+                        <p class="text-black;"><?= empty($errors);?></p>
+
+                        <?php 
+                        if (isset($errors['body'])): ?>
                                 <p><?= $errors['body']?></p>
                         <?php endif; ?>
                     </div>

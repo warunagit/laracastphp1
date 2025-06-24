@@ -8,9 +8,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
     if(strlen($_POST['body'] == 0)){
         $errors['body'] = 'A body is required';
+        dd(empty($errors));
     }
 
-    if(empty($errors)){
+    /*if(empty($errors)){
         $db->query(
         'INSERT INTO notes(body,user_id) VALUES(:body, :user_id)',
     [
@@ -18,7 +19,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 'user_id' => 1
             ]
         );
-    }
+    }*/
+    //dd(strlen($_POST['body']));
+    //dd(empty($errors));
 }
+
 
 require "views/note-create.view.php";
