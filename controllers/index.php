@@ -1,3 +1,3 @@
 <?php
-$page="Index";
-require "views/index.view.php";
+
+view("index.view.php",['page'=>"Index"]);

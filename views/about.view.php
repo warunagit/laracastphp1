@@ -1,5 +1,5 @@
 <?php
-require "partials/header.php";
-require "partials/nav.php";
-require "partials/banner.php";
+require base_path("views/partials/header.php");
+require base_path("views/partials/nav.php");
+require base_path("views/partials/banner.php");
 ?>

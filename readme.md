@@ -32,6 +32,11 @@ static function direct call without objects
 
 9
 file name convension
+folder heirachy
+autoload required classes in public/index.php
+
+10
+
 
 
 

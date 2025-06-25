@@ -1,3 +1,3 @@
 <?php
-$page="About";
-include "views/about.view.php";
+
+view("about.view.php",['page'=>"About"]);

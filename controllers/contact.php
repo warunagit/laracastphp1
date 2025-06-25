@@ -1,3 +1,3 @@
 <?php
-$page="Contact";
-include "views/contact.view.php";
+
+view("contact.view.php",['page'=>"Contact"]);

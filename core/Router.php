@@ -1,7 +1,7 @@
 <?php
 //1
 //get available routes
-$routes = require 'routes.php';
+$routes = require base_path('routes.php');
 
 //2
 //get base url, without params
@@ -12,7 +12,7 @@ routeToController($uri,$routes);
 
 function routeToController($uri,$routes){
     if(array_key_exists($uri, $routes)){
-        require $routes[$uri];
+        require base_path($routes[$uri]);
     }else{
         abort();
     }
@@ -22,6 +22,6 @@ function routeToController($uri,$routes){
 //response to server codes
 function abort($code = 404){
     http_response_code($code);
-    require "views/{$code}.view.php";
+    require base_path("views/{$code}.view.php");
     die();
 }
