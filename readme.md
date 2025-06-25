@@ -25,3 +25,13 @@ never directly use parameters in MYSQL queries due vulnerabilities
 7
 authentication. page view only for logged in user_id.
 cofiguration constants store in Response.php class.
+
+8
+form validation class
+static function direct call without objects
+
+9
+file name convension
+
+
+

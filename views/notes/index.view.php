@@ -1,7 +1,7 @@
 <?php
-require "partials/header.php";
-require "partials/nav.php";
-require "partials/banner.php"; ?>
+require "views/partials/header.php";
+require "views/partials/nav.php";
+require "views/partials/banner.php"; ?>
 
     <div class="pt-24">
 		<div class="container flex flex-col flex-wrap items-center px-3 mx-auto md:flex-row">
@@ -23,4 +23,4 @@ require "partials/banner.php"; ?>
 		</div>
     </div>
 
-<?php require "partials/footer.php"; ?>
+<?php require "views/partials/footer.php"; ?>

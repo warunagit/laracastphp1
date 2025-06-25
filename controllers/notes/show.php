@@ -1,5 +1,5 @@
 <?php
-    $page="Notes";
+    $page="Note";
     $currentUserId = 1;
 
     $config = require 'config.php';
@@ -11,4 +11,4 @@
 
     authorize($note['user_id'] == $currentUserId);
     
-    require "views/note.view.php";
+    require "views/notes/show.view.php";

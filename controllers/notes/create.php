@@ -1,17 +1,21 @@
 <?php
 $page="Create Note";
+
 $config = require 'config.php';
+require 'Validator.php';
+
 $db = new Database($config['database']);
+
+$errors = [];
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $errors = [];
 
-    if(strlen($_POST['body'] == 0)){
-        $errors['body'] = 'A body is required';
-        dd(empty($errors));
+    if(!Validator::string($_POST['body'],1,1000)){
+        $errors['body'] = 'A body is no more than 1000 words is required';
     }
 
-    /*if(empty($errors)){
+    if(empty($errors)){
         $db->query(
         'INSERT INTO notes(body,user_id) VALUES(:body, :user_id)',
     [
@@ -19,10 +23,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 'user_id' => 1
             ]
         );
-    }*/
-    //dd(strlen($_POST['body']));
-    //dd(empty($errors));
+    }
 }
 
-
-require "views/note-create.view.php";
+require "views/notes/create.view.php";
