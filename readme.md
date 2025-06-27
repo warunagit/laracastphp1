@@ -36,6 +36,11 @@ folder heirachy
 autoload required classes in public/index.php
 
 10
+namespace
+works with php class autoloader class: spl_autoload_register
+namespace is a virtual root folder system
+define classes: namespace name;
+use class from namespace: use namespace\class-name
 
 
 
