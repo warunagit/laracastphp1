@@ -7,7 +7,7 @@ require base_path("views/partials/banner.php"); ?>
 		<div class="container flex flex-col flex-wrap items-center px-3 mx-auto md:flex-row">
 			<!--Left Col-->
 			<div class="flex flex-col items-start">
-                <form method="POST">
+                <form method="POST" action="/notes">
                     <label for="body" class="text-black">Description</label>
                     <div>
                         <textarea id="body" name="body" class="border border-blue-gray-200 text-black" required placeholder="Write youre note here."><?= isset($_POST['body']) ??  '' ?></textarea>

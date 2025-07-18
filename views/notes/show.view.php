@@ -10,7 +10,7 @@ require base_path("views/partials/banner.php"); ?>
 				<p><?= htmlspecialchars($note['body']);?></p>
 
 				<form class="mt-6" method="POST">
-					<input type="hidden" name="_mrthod" value="DELETE"/>
+					<input type="hidden" name="_method" value="DESTROY"/>
 					<input name="id" type="hidden" value="<?= $note['id']?>" type="text"/>
 					<button class="text-sm text-red-400 pt-8">Delete</button>
 				</form>
