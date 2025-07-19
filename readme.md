@@ -42,6 +42,12 @@ namespace is a virtual root folder system
 define classes: namespace name;
 use class from namespace: use namespace\class-name
 
+11
+one request, one controller
+all requests catch by index.php
+then, compare with pre initialized routes.
+then, add appropriate method and redirect to the controller.
+
 
 
 
