@@ -48,6 +48,10 @@ all requests catch by index.php
 then, compare with pre initialized routes.
 then, add appropriate method and redirect to the controller.
 
+12
+container class.
+make easy to add(bind)/get(resolve) code blocks.
+
 
 
 
