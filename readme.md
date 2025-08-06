@@ -1,3 +1,8 @@
+a
+start php from cmd: php -S localhost:8080 //htdoc folder
+start from custom root folder: php -S localhost:8888 -t public
+
+
 1
 Pages saperates into views and controllers folders
 views contains html layout
@@ -50,7 +55,9 @@ then, add appropriate method and redirect to the controller.
 
 12
 container class.
-make easy to add(bind)/get(resolve) code blocks.
+make easy to add(bind)/get(resolve) code blocks to repeat use.
+eg: db class initialization on pages
+
 
 
 
