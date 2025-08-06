@@ -1,11 +1,14 @@
 <?php
 
+use Core\App;
 use Core\Database;
 
 $currentUserId = 1;
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+//$config = require base_path('config.php');
+//$db = new Database($config['database']);
+
+App::container()->resolve('Core\Database');
 
 ///Delete note
 $note_id = $_GET['id'];
