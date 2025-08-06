@@ -58,7 +58,11 @@ container class.
 make easy to add(bind)/get(resolve) code blocks to repeat use.
 eg: db class initialization on pages
 
-
+13
+App.php class
+make container accessible from anywhere.
+static method can access without initialization.
+App::container
 
 
 
