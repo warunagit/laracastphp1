@@ -5,11 +5,8 @@ use Core\Database;
 
 $currentUserId = 1;
 
-//$config = require base_path('config.php');
-//$db = new Database($config['database']);
-
 //request to container
-$db = App::container()->resolve('Core\Database');
+$db = App::resolve(Database::class);
 
 ///Delete note
 $note_id = $_GET['id'];
