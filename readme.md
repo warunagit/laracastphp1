@@ -1,6 +1,7 @@
 a
 start php from cmd: php -S localhost:8080 //htdoc folder
 start from custom root folder: php -S localhost:8888 -t public
+php -S localhost:8080 -d display_errors=1 -t public\
 
 
 1

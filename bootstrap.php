@@ -11,4 +11,4 @@ $container->bind('Core\Database',function(){
     return new Database($config['database']);
 });
 
-//App::setContainer($container);
+App::setContainer($container);
