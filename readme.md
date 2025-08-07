@@ -63,7 +63,11 @@ eg: db class initialization on pages
 App.php class
 make container accessible from anywhere.
 static method can access without initialization.
-App::container
 
+new:
+$db = App::resolve(Database::class);
+old:
+$config = require base_path('config.php');
+$db = new Database($config['database']);
 
-
+14
