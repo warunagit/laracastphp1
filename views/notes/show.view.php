@@ -9,6 +9,8 @@ require base_path("views/partials/banner.php"); ?>
 			<div class="flex flex-col items-start justify-center w-full text-center md:w-2/5 md:text-left  text-black">
 				<p><?= htmlspecialchars($note['body']);?></p>
 
+				<a class="text-blue-500" href="/note/edit?id=<?=$note['id']?>">Edit</a>
+
 				<form class="mt-6" method="POST">
 					<input type="hidden" name="_method" value="DESTROY"/>
 					<input name="id" type="hidden" value="<?= $note['id']?>" type="text"/>
