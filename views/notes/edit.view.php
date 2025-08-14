@@ -10,9 +10,7 @@ require base_path("views/partials/banner.php"); ?>
                 <form method="POST" action="/notes">
                     <label for="body" class="text-black">Description</label>
                     <div>
-                        <textarea id="body" name="body" class="border border-blue-gray-200 text-black" required placeholder="Write youre note here."><?= isset($_POST['body']) ??  '' ?></textarea>
-
-                        
+                        <textarea id="body" name="body" class="border border-blue-gray-200 text-black" required placeholder="Write youre note here."><?= $note['body']; ?></textarea>
 
                         <?php 
                         if(isset($errors['body'])): ?>
