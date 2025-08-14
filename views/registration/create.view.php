@@ -1,18 +1,15 @@
 <?php
 require base_path("views/partials/header.php");
-require base_path("views/partials/nav.php");
-require base_path("views/partials/banner.php"); ?>
+require base_path("views/partials/nav.php"); ?>
 
     <main>
         <div class="bg-gray-50 flex py-12 items-center justify-center">
             <div class="min-h-screen flex flex-col items-center justify-center py-6 px-4">
                 <div class="max-w-[480px] w-full">
-                <a href="javascript:void(0)"><img
-                    src="https://readymadeui.com/readymadeui.svg" alt="logo" class="w-40 mb-8 mx-auto block" />
-                </a>
+                
 
                 <div class="p-6 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm">
-                    <h1 class="text-slate-900 text-center text-3xl font-semibold">Sign in</h1>
+                    <h1 class="text-slate-900 text-center text-3xl font-semibold">Register Here</h1>
                     <form class="mt-12 space-y-6">
                     <div>
                         <label class="text-slate-900 text-sm font-medium mb-2 block">User name</label>
@@ -49,7 +46,7 @@ require base_path("views/partials/banner.php"); ?>
 
                     <div class="!mt-12">
                         <button type="button" class="w-full py-2 px-4 text-[15px] font-medium tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer">
-                        Sign in
+                        Register
                         </button>
                     </div>
                     <p class="text-slate-900 text-sm !mt-6 text-center">Don't have an account? <a href="javascript:void(0);" class="text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold">Register here</a></p>
