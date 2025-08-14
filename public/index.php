@@ -1,6 +1,8 @@
 <?php
-
 namespace Core;
+
+session_start();
+$_SESSION['username'];
 
 const BASE_PATH = __DIR__ . "/../";
 require BASE_PATH . 'core/functions.php';

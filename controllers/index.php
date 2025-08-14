@@ -1,3 +1,5 @@
 <?php
 
-view("index.view.php",['page'=>"Index"]);
+$_SESSION['username'] = 'Waruna';
+
+view("index.view.php",['page'=>"Home"]);

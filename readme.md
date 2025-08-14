@@ -70,4 +70,7 @@ old:
 $config = require base_path('config.php');
 $db = new Database($config['database']);
 
+used with update post mechanism
+
 14
+session
