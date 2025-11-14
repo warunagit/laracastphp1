@@ -3,7 +3,7 @@ require base_path("views/partials/header.php");
 require base_path("views/partials/nav.php"); ?>
 
 <style>
-    input{
+    input,label{
         color: #000;
     }
 </style>
@@ -42,21 +42,7 @@ require base_path("views/partials/nav.php"); ?>
                             <p class="text-red-500"><?= $errors['password']?></p>
                         <?php endif; ?>
                     </div>
-                    <!--<div class="flex flex-wrap items-center justify-between gap-4">
-                        <div class="flex items-center">
-                        <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-slate-300 rounded" />
-                        <label for="remember-me" class="ml-3 block text-sm text-slate-900">
-                            Remember me
-                        </label>
-                        </div>
-                        <div class="text-sm">
-                        <a href="jajvascript:void(0);" class="text-blue-600 hover:underline font-semibold">
-                            Forgot your password?
-                        </a>
-                        </div>
-                        </div>-->
-
-
+                    
                     <div class="!mt-12">
                         <button type="submit" class="w-full py-2 px-4 text-[15px] font-medium tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer">
                         Register
@@ -65,6 +51,8 @@ require base_path("views/partials/nav.php"); ?>
                     <p class="text-slate-900 text-sm !mt-6 text-center">Don't have an account? <a href="javascript:void(0);" class="text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold">Register here</a></p>
                     </form>
                 </div>
+
+                <?php dd($_SESSION['user']); ?>
                 </div>
             </div>
         </div>

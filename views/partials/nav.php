@@ -51,7 +51,13 @@
             </li>
         </ul>
         <button id="navAction"
-            class="px-8 py-4 mx-auto mt-4 font-bold text-gray-800 bg-white rounded-full shadow opacity-75 lg:mx-0 hover:underline lg:mt-0">Action</button>
+            class="px-8 py-4 mx-auto mt-4 font-bold text-gray-800 bg-white rounded-full shadow opacity-75 lg:mx-0 hover:underline lg:mt-0">
+            <?php if($_SESSION['user']) : ?>
+                <?=$_SESSION['user']['email']; ?>
+            <?php else: ?>
+                <a href="/register">Register</a>
+            <?php endif; ?>
+        </button>
     </div>
 </div>
 
