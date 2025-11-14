@@ -55,6 +55,4 @@ if($user){
     ];
 
     header('location: /');
-    exit();
-
-    
+    exit();    

@@ -1,3 +1,6 @@
+Laracasts - PHP for Beginners (2023 Edition)
+https://www.youtube.com/playlist?list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC
+
 a
 start php from cmd: php -S localhost:8080 //htdoc folder
 start from custom root folder: php -S localhost:8888 -t public

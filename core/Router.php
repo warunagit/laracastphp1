@@ -29,6 +29,10 @@ class Router{
         $this->add('PUT', $uri, $controller);
     }
 
+    public function only($key){
+        
+    }
+
     public function route($uri, $method){
         foreach($this->routes as $route){
             if(($route['uri'] == $uri) && $route['method']==strtoupper($method)){
