@@ -1,5 +1,8 @@
 <?php
 namespace Core;
+
+use Core\Middleware\Auth;
+use Core\Middleware\Guest;
 class Router{
 
     protected $routes = [];
@@ -35,12 +38,22 @@ class Router{
         //put a value in the end of the array.
         //$this->routes[99999999]['middleware'] = $key;
         $this->routes[array_key_last($this->routes)]['middleware']=$key;
-        dd($this->routes);
+
+        return $this;
     }
 
     public function route($uri, $method){
         foreach($this->routes as $route){
             if(($route['uri'] == $uri) && $route['method']==strtoupper($method)){
+                
+                if($route['middleware']=== 'guest'){
+                    (new Guest)->handle();
+                }
+
+                if($route['middleware']=== 'auth'){
+                    (new Auth)->handle();
+                }
+            
                 return require base_path($route['controller']);
             }
         }
