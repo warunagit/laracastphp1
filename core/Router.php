@@ -3,6 +3,8 @@ namespace Core;
 
 use Core\Middleware\Auth;
 use Core\Middleware\Guest;
+use Core\Middleware\Middleware;
+
 class Router{
 
     protected $routes = [];
@@ -45,19 +47,18 @@ class Router{
     public function route($uri, $method){
         foreach($this->routes as $route){
             if(($route['uri'] == $uri) && $route['method']==strtoupper($method)){
-                
-                if($route['middleware']=== 'guest'){
-                    (new Guest)->handle();
-                }
 
-                if($route['middleware']=== 'auth'){
-                    (new Auth)->handle();
+                if($route['middleware']){
+                    $middleware = Middleware::MAP[$route['middleware']];
+                    //something here like if-else witha a return statment connected to the class
+
+                    (new $middleware)->handle();
+                    //calls to the specified handle method of the received class 
                 }
-            
+                
                 return require base_path($route['controller']);
             }
         }
-
         $this->abort();
     }
 
