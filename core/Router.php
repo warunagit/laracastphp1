@@ -48,14 +48,8 @@ class Router{
         foreach($this->routes as $route){
             if(($route['uri'] == $uri) && $route['method']==strtoupper($method)){
 
-                if($route['middleware']){
-                    $middleware = Middleware::MAP[$route['middleware']];
-                    //something here like if-else witha a return statment connected to the class
+                Middleware::resolve($route['middleware']);
 
-                    (new $middleware)->handle();
-                    //calls to the specified handle method of the received class 
-                }
-                
                 return require base_path($route['controller']);
             }
         }

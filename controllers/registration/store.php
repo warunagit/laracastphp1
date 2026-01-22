@@ -49,10 +49,10 @@ if($user){
     ]);
 }
 
-    //mark that user has logged in
-    $_SESSION['user']=[
-        'email'=>$email
-    ];
+//mark that user has logged in
+$_SESSION['user']=[
+    'email'=>$email
+];
 
-    header('location: /');
-    exit();    
+header('location: /');
+exit();
