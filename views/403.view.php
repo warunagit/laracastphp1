@@ -6,3 +6,5 @@ require "partials/nav.php";
     <p>Access Forbidden!</p>
     <a href="/">Back</a>
 </div>
+
+<?php require base_path("views/partials/footer.php"); ?>
