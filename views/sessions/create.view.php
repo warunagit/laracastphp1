@@ -15,8 +15,8 @@ require base_path("views/partials/nav.php"); ?>
                 
 
                 <div class="p-6 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm">
-                    <h1 class="text-slate-900 text-center text-3xl font-semibold">Register Here</h1>
-                    <form class="mt-12 space-y-6" method="post" action="/register">
+                    <h1 class="text-slate-900 text-center text-3xl font-semibold">Login Here</h1>
+                    <form class="mt-12 space-y-6" method="post" action="/sessions">
                     <div>
                         <label class="text-slate-900 text-sm font-medium mb-2 block" for="email">Email</label>
                         <div class="relative flex items-center">
@@ -45,7 +45,7 @@ require base_path("views/partials/nav.php"); ?>
                     
                     <div class="!mt-12">
                         <button type="submit" class="w-full py-2 px-4 text-[15px] font-medium tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer">
-                        Register
+                        Login
                         </button>
                     </div>
                     </form>

@@ -50,14 +50,13 @@
                     href="/notes">Notes</a>
             </li>
         </ul>
-        <button id="navAction"
-            class="px-8 py-4 mx-auto mt-4 font-bold text-gray-800 bg-white rounded-full shadow opacity-75 lg:mx-0 hover:underline lg:mt-0">
-            <?php if($_SESSION['user']) : ?>
+            <?php if(isset($_SESSION['user'])) : ?>
                 <?=$_SESSION['user']['email']; ?>
             <?php else: ?>
-                <a href="/register">Register</a>
+            </br><a href="/register" class="<?= urlIs('/register') ?>">Register</a>
+            <a href="/login" class="<?= urlIs('/login') ?>">Login</a>
             <?php endif; ?>
-        </button>
+
     </div>
 </div>
 
