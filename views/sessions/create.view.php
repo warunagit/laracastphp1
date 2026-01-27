@@ -16,7 +16,7 @@ require base_path("views/partials/nav.php"); ?>
 
                 <div class="p-6 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm">
                     <h1 class="text-slate-900 text-center text-3xl font-semibold">Login Here</h1>
-                    <form class="mt-12 space-y-6" method="post" action="/sessions">
+                    <form class="mt-12 space-y-6" method="POST" action="/sessions">
                     <div>
                         <label class="text-slate-900 text-sm font-medium mb-2 block" for="email">Email</label>
                         <div class="relative flex items-center">

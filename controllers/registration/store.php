@@ -37,9 +37,6 @@ $user = $db->query('SELECT * FROM users WHERE email=:email', [
 if($user){
     //there is a user exist with an account
     header('location: /');
-    $_SESSION['user']=[
-        'email'=>$email
-    ];
     exit();
 }else{
     //if there is no user
@@ -47,12 +44,10 @@ if($user){
         'email'=>$email,
         'password'=> password_hash($password, PASSWORD_BCRYPT)
     ]);
+
+    login($user);
+
+    header('location: /');
+    exit();
 }
 
-//mark that user has logged in
-$_SESSION['user']=[
-    'email'=>$email
-];
-
-header('location: /');
-exit();
