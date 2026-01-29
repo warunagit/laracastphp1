@@ -45,13 +45,18 @@
                     href="/contact">Contact</a>
             </li>
             <li class="mr-3">
-                <a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline
+                <?php if ($_SESSION['user'] ?? false) : ?><a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline
                 <?= urlIs('/notes')?'font-bold':''?>"
-                    href="/notes">Notes</a>
+                    href="/notes">Notes</a><?php endif ?>
             </li>
         </ul>
             <?php if(isset($_SESSION['user'])) : ?>
-                <?=$_SESSION['user']['email']; ?>
+                <?=$_SESSION['user']['email']; ?> | 
+                <form method="POST" action="/session">
+                    <input type="hidden" name="_method" value="DESTROY"/>
+                    <button type="submit">Log Out</button>
+                </form>
+                <!--<a href="/logout" class="<?= urlIs('/login') ?>">Logout</a>-->
             <?php else: ?>
             </br><a href="/register" class="<?= urlIs('/register') ?>">Register</a>
             <a href="/login" class="<?= urlIs('/login') ?>">Login</a>
