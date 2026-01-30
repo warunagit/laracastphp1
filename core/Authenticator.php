@@ -13,16 +13,10 @@ class Authenticator{
                     'email'=>$email
                 ]);
 
-                header('location: /');
-                exit();
+                return true;
             }
         }
-
-        return view('session/create.view.php',[
-            'errors'=>[
-                    'email'=>' No matching account found for that email and password.'
-            ]
-        ]);
+        return false;        
     }
 
     public function login($user){

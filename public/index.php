@@ -2,7 +2,7 @@
 namespace Core;
 
 session_start();
-$_SESSION['username'];
+$_SESSION['user'];
 
 const BASE_PATH = __DIR__ . "/../";
 require BASE_PATH . 'core/functions.php';
