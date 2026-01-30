@@ -27,12 +27,7 @@ class Authenticator{
     }
 
     public function logout(){
-        //delete the session
-        $_SESSION = [];
-        session_destroy();
-        //delete the cookie
-        $params = session_get_cookie_params();
-        setcookie('PHPSESSID','',time()-3600, $params['domain'], $params['secure'], $params['httponly']);
+        Session::destroy();
     }
 }
 

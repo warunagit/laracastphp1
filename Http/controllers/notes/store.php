@@ -32,5 +32,7 @@ $db->query(
     ]
 );
 
+$_SESSION['_flashed']['errors'] = $form->errors();
+
 header('location: /notes');
 die();
