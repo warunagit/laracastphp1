@@ -21,7 +21,7 @@ class Session{
     }
 
     public static function unflash(){
-        unset($_SESSON['_flash']);
+        unset($_SESSION['_flash']);
     }
 
     public static function flush(){
