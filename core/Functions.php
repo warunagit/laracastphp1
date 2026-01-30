@@ -37,5 +37,8 @@ function redirect($path){
     exit();
 }
 
+function old($key, $default = null){
+    Core\Session::get('old')[$key] ?? $default;
+}
 ?>
 
