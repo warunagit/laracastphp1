@@ -22,10 +22,7 @@ class LoginForm{
 
     public static function validate($attributes){
         $instance = new static($attributes);
-        if($instance->failed()){
-            $instance->throw();
-        }
-        return $instance;
+        return $instance->failed() ? $instance->throw() : $instance;
     }
 
     public function throw(){
@@ -42,5 +39,6 @@ class LoginForm{
 
     public function error($field, $message){
         $this->errors[$field] = $message;
+        return $this;
     }
 }
