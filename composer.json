@@ -1,0 +1,10 @@
+{
+    "name": "user/htdocs",
+    "authors": [
+        {
+            "name": "warunagit",
+            "email": "waruna.git@gmail.com"
+        }
+    ],
+    "require": {}
+}
