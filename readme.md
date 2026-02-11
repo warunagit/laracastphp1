@@ -81,3 +81,9 @@ sessions + registration
 15
 middleware
 use for authentication
+
+16
+adding Composer fependancy manager
+it is a php class auto loader
+required locations should define in composer.json
+add entry point to index-> require BASE_PATH . '/vendor/autoload.php';

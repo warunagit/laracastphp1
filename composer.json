@@ -2,9 +2,15 @@
     "name": "user/htdocs",
     "authors": [
         {
-            "name": "warunagit",
+            "name": "waruna",
             "email": "waruna.git@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
 }
