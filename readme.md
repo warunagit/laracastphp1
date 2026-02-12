@@ -83,7 +83,10 @@ middleware
 use for authentication
 
 16
-adding Composer fependancy manager
+adding Composer dependancy manager
 it is a php class auto loader
 required locations should define in composer.json
 add entry point to index-> require BASE_PATH . '/vendor/autoload.php';
+
+adding composer package illuminate/collections
+it uses to manipulate collections

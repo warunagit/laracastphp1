@@ -6,7 +6,9 @@
             "email": "waruna.git@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/collections": "^12.51"
+    },
     "autoload": {
         "psr-4": {
             "Core\\": "Core/",
