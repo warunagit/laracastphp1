@@ -88,5 +88,24 @@ it is a php class auto loader
 required locations should define in composer.json
 add entry point to index-> require BASE_PATH . '/vendor/autoload.php';
 
+adding composer packages by:
+composer require PUBLISHER/IDENTIFIER
+
 adding composer package illuminate/collections
 it uses to manipulate collections
+it works as a wrapper around that specified array to simply manage
+$numbers = new Collection([1,2,3,4,5,6,7,8,9,10]);
+die(var_dump($numbers));
+if($numbers->contains(50)){
+    die("contains 2");
+}
+---
+$answer = $numbers->filter(function($number){
+    return $number <= 5;
+});
+die($answer);
+---
+
+17
+adding composer package pestphp/pest
+it is a package to testing
